@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">2-Harjoitus</string>
+    <string name="title">H1_1</string>
+    <string name="add">Add Visitors</string>
+    <string name="decrease">Decrease Visitors</string>
+    <string name="visitor_desc">Ammount of visitors</string>
+    <string name="counter">0</string>
+    <string name="reset_btn">RESET</string>
+    <string name="raffle_btn">ARVONTA</string>
+</resources>
