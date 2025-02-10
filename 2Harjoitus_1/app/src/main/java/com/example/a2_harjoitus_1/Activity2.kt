@@ -29,7 +29,7 @@ class Activity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        SwipeManager.initialize(this, MainActivity::class.java, MainActivity::class.java)
+        SwipeManager.initialize(this, MainActivity::class.java, Activity3::class.java)
 
         raffle1 = findViewById(R.id.raffle1)
         raffle2 = findViewById(R.id.raffle2)
@@ -57,7 +57,7 @@ class Activity2 : AppCompatActivity() {
                     }
                     if (raffle1Str != "" && raffle2Str != "" && raffle3Str != ""){
                         break
-                    }
+                 }
                 }
 
                 raffle1.setText(raffle1Str)

@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        SwipeManager.initialize(this, Activity2::class.java, Activity2::class.java)
+        SwipeManager.initialize(this, Activity3::class.java, Activity2::class.java)
 
 
         add = findViewById(R.id.add)

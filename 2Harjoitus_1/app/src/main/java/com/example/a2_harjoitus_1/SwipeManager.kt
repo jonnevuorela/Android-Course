@@ -10,9 +10,9 @@ object SwipeManager {
     private var y2: Float = 0.0f
 
     @SuppressLint("ClickableViewAccessibility")
-    fun initialize(activity: Activity, nextActivity: Class<out Activity>, previousActivity: Class<out Activity>) {
+    fun initialize(activity: Activity, previousActivity: Class<out Activity>, nextActivity: Class<out Activity>) {
         activity.window.decorView.setOnTouchListener { _, event ->
-            handleTouchEvent(event, activity, nextActivity, previousActivity)
+            handleTouchEvent(event, activity, previousActivity, nextActivity)
         }
     }
 

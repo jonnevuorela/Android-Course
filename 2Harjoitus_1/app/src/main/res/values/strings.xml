@@ -7,4 +7,7 @@
     <string name="counter">0</string>
     <string name="reset_btn">RESET</string>
     <string name="raffle_btn">ARVONTA</string>
+    <string name="photo_title" />
+    <string name="previous_btn">PREVIOUS</string>
+    <string name="next_btn">NEXT</string>
 </resources>
