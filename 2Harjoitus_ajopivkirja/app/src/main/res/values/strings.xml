@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">2-Harjoitus_ajopäiväkirja</string>
+    <string name="title">Ajopäiväkirja</string>
+    <string name="description">VALITSE TOIMINTO</string>
+    <string name="raport_btn">RAPORTIT</string>
+    <string name="add_btn">LISÄÄ AJO</string>
+    <string name="info_btn">YRITYSTIEDOT</string>
+    <string name="settings_btn">ASETUKSET</string>
+</resources>
