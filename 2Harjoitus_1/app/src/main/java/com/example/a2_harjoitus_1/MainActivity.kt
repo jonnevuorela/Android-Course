@@ -1,4 +1,4 @@
-package com.example.a2_harjoitus_1
+package com.example.a3_harjoitus_1
 
 import SwipeManager
 import android.os.Bundle
