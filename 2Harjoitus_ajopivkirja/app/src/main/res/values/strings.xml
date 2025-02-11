@@ -6,4 +6,18 @@
     <string name="add_btn">LISÄÄ AJO</string>
     <string name="info_btn">YRITYSTIEDOT</string>
     <string name="settings_btn">ASETUKSET</string>
+    <string name="select">VALITSE TOIMINTO</string>
+    <string name="add">Ajokirjaus</string>
+    <string name="vehicle">Ajoneuvo</string>
+    <string name="date">Päivämäärä</string>
+    <string name="travel">Kilometrit</string>
+    <string name="select_btn">VALITSE</string>
+    <string name="km">KM</string>
+    <string name="save_btn">TALLENNA</string>
+    <string name="added">Ajo kirjattu</string>
+    <string name="menu_btn">TAKAISIN PÄÄVALIKKOON</string>
+    <string-array name="vehicles">
+        <item>BMW-123</item>
+        <item>AUD-1</item>
+    </string-array>
 </resources>

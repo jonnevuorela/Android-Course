@@ -1,5 +1,6 @@
 package com.example.a2_harjoitus_ajopivkirja
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,13 +10,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    lateinit var raport_button: Button
+    lateinit var report_button: Button
     lateinit var add_button: Button
     lateinit var info_button: Button
     lateinit var settings_button: Button
 
     fun initializeElememnts(){
-        raport_button = findViewById(R.id.raport)
+        report_button = findViewById(R.id.report)
         add_button = findViewById(R.id.add)
         info_button = findViewById(R.id.info)
         settings_button = findViewById(R.id.settings)
@@ -30,7 +31,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         initializeElememnts()
-        activity.startActivity
+
+        add_button.setOnClickListener {
+            this.startActivity(Intent(this, Add::class.java))
+        }
+
+        }
+
     }
-    fun navigateToActivityk
-}
