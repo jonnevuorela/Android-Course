@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">matikkapeli</string>
+    <string name="title">Matikkapeli</string>
+    <string name="points">Points</string>
+</resources>
