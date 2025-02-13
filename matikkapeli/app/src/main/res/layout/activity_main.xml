@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:background="#FFEB3B"
                 android:paddingTop="15dp"
-                android:text="@{viewmodel.points}"
+                android:text="@{String.valueOf(viewmodel.points)}"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -79,6 +79,7 @@
             <TextView
                 android:id="@+id/exercise_title"
                 android:layout_width="wrap_content"
+                android:text='@{String.format("Exercise %d/%d", viewmodel.exercise, viewmodel.numberOfExercises)}'
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
@@ -93,7 +94,7 @@
 
             <TextView
                 android:id="@+id/number1"
-                android:text="@{viewmodel.number1}"
+                android:text='@{String.valueOf(viewmodel.number1)}'
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -113,7 +114,7 @@
 
             <TextView
                 android:id="@+id/number2"
-                android:text="@{viewmodel.number2}"
+                android:text='@{String.valueOf(viewmodel.number2)}'
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -141,8 +142,10 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:textSize="20sp"
-                    android:text="@={viewmodel.answerTextContent}"/>
-
+                    android:inputType="number"
+                    android:text="@={viewmodel.answerTextContent}"
+                    android:maxLength="3"
+                    android:imeOptions="actionDone"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 

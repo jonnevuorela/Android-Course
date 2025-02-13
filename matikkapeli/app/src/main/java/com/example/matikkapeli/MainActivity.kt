@@ -1,37 +1,64 @@
 package com.example.matikkapeli
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import android.text.InputType
+import android.view.KeyEvent
+import android.view.inputmethod.EditorInfo
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.Observer
 import com.example.matikkapeli.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+    private val viewModel: MainViewModel by viewModels()
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-       val mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        _binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.lifecycleOwner = this
+        binding.viewmodel = viewModel
 
-       val binding = DataBindingUtil.setContentView<ActivityMainBinding>(
-            this, R.layout.activity_main
-        ).apply {
-            lifecycleOwner = this@MainActivity
-            viewmodel = mainViewModel
-        }
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        viewModel.snackbarMessage.observe(this) { message ->
+            message?.let {
+                if (it.isNotEmpty()) {
+                    Snackbar.make(binding.main, it, Snackbar.LENGTH_SHORT)
+                        .setAnchorView(binding.send)
+                        .show()
+                    viewModel.snackbarMessageHandled()
+                }
+            }
         }
 
-        mainViewModel.answerTextContent.observe(this){ answer ->
-        Toast.makeText(this, answer, Toast.LENGTH_SHORT).show()
+        binding.answer.apply {
+            inputType = InputType.TYPE_CLASS_NUMBER
+            setOnEditorActionListener { _, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE ||
+                    (event?.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)
+                ) {
+                    viewModel.sendAnswer()
+                    true
+                } else {
+                    false
+                }
+            }
+        }
+
+        viewModel.initializeNumbers()
+        viewModel.navigateToSummary.observe(this) { shouldNavigate ->
+            if (shouldNavigate) {
+                val intent = Intent(this, Summary::class.java)
+                intent.putExtra("POINTS", viewModel.points.value ?: 0)
+                startActivity(intent)
+                finish()
+            }
         }
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
-
