@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.a3_harjoitus_1.MainActivity
 import kotlin.properties.Delegates
 
 class Activity3 : AppCompatActivity() {
