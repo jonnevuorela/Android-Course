@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/vieras"
+        android:layout_width="205dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="733dp">
+
+            <TextView
+                android:id="@+id/virheet_title_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="109dp"
+                android:padding="5dp"
+                android:text="@string/virheet"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/virheet_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="67dp"
+                android:background="#FF0000"
+                android:backgroundTint="#FF0000"
+                android:padding="5dp"
+                android:text="0"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/virheet_title_vieras"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pisteet_title_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="42dp"
+                android:text="@string/pisteet_title_vieras"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/virheet_title_vieras" />
+
+            <TextView
+                android:id="@+id/pisteet_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="86dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="86dp"
+                android:background="#FFC107"
+                android:backgroundTint="#FFC107"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pisteet_title_vieras" />
+
+            <Button
+                android:id="@+id/button_virhe_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/virhebutton"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="374dp" />
+
+            <Button
+                android:id="@+id/button1_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/onepoint"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <Button
+                android:id="@+id/button2_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twopoint"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="278dp" />
+
+            <Button
+                android:id="@+id/button3_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/threepoint"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="326dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vieras"
+        android:layout_width="205dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="733dp">
+
+            <TextView
+                android:id="@+id/virheet_title_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="109dp"
+                android:padding="5dp"
+                android:text="@string/virheet"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/virheet_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="67dp"
+                android:background="#FF0000"
+                android:backgroundTint="#FF0000"
+                android:padding="5dp"
+                android:text="0"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/virheet_title_vieras"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pisteet_title_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="42dp"
+                android:text="@string/pisteet_title_koti"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/virheet_title_vieras" />
+
+            <TextView
+                android:id="@+id/pisteet_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="86dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="86dp"
+                android:background="#FFC107"
+                android:backgroundTint="#FFC107"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pisteet_title_vieras" />
+
+            <Button
+                android:id="@+id/button_virhe_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/virhebutton"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="374dp" />
+
+            <Button
+                android:id="@+id/button1_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/onepoint"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <Button
+                android:id="@+id/button2_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twopoint"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="278dp" />
+
+            <Button
+                android:id="@+id/button3_vieras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/threepoint"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="326dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

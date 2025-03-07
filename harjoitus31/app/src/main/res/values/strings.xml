@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">harjoitus-3-1</string>
+    <string name="virheet">virheet</string>
+    <string name="pisteet_title">Pisteet</string>
+    <string name="pisteet_title_koti">Pisteet - KOTI</string>
+    <string name="onepoint">+1p</string>
+    <string name="twopoint">+2p</string>
+    <string name="threepoint">+3p</string>
+    <string name="virhebutton">virhe</string>
+    <string name="pisteet_title_vieras">Pisteet - VIERAS</string>
+</resources>
