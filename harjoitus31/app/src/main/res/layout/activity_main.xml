@@ -44,6 +44,7 @@
                 android:padding="5dp"
                 android:text="0"
                 android:textSize="16sp"
+                android:onClick="reduceVirheVieras"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/virheet_title_vieras"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -72,6 +73,7 @@
                 android:backgroundTint="#FFC107"
                 android:padding="10dp"
                 android:text="0"
+                android:onClick="pisteetVieras"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -87,6 +89,7 @@
                 android:text="@string/virhebutton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:onClick="addVirheVieras"
                 app:layout_constraintTop_toBottomOf="@+id/button3_vieras" />
 
             <Button
@@ -96,6 +99,7 @@
                 android:layout_marginStart="57dp"
                 android:layout_marginTop="31dp"
                 android:layout_marginEnd="59dp"
+                android:onClick="pisteetVieras"
                 android:text="@string/onepoint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -108,6 +112,7 @@
                 android:layout_marginStart="57dp"
                 android:layout_marginEnd="59dp"
                 android:text="@string/twopoint"
+                android:onClick="pisteetVieras"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button1_vieras" />
@@ -119,6 +124,7 @@
                 android:layout_marginStart="57dp"
                 android:layout_marginEnd="59dp"
                 android:text="@string/threepoint"
+                android:onClick="pisteetVieras"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2_vieras" />
@@ -163,6 +169,7 @@
                 android:padding="5dp"
                 android:text="0"
                 android:textSize="16sp"
+                android:onClick="reduceVirheKoti"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/virheet_title_koti"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -191,6 +198,7 @@
                 android:backgroundTint="#FFC107"
                 android:padding="10dp"
                 android:text="0"
+                android:onClick="pisteetKoti"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -206,6 +214,7 @@
                 android:text="@string/virhebutton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:onClick="addVirheKoti"
                 app:layout_constraintTop_toBottomOf="@+id/button3_koti" />
 
             <Button
@@ -216,6 +225,7 @@
                 android:layout_marginTop="31dp"
                 android:layout_marginEnd="60dp"
                 android:text="@string/onepoint"
+                android:onClick="pisteetKoti"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pisteet_koti" />
@@ -227,6 +237,7 @@
                 android:layout_marginStart="57dp"
                 android:layout_marginEnd="60dp"
                 android:text="@string/twopoint"
+                android:onClick="pisteetKoti"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button1_koti" />
@@ -237,6 +248,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="57dp"
                 android:layout_marginEnd="60dp"
+                android:onClick="pisteetKoti"
                 android:text="@string/threepoint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
