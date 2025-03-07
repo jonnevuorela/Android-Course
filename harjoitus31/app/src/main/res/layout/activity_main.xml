@@ -82,39 +82,52 @@
                 android:id="@+id/button_virhe_vieras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginEnd="59dp"
                 android:text="@string/virhebutton"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="374dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3_vieras" />
 
             <Button
                 android:id="@+id/button1_vieras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="59dp"
                 android:text="@string/onepoint"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="230dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pisteet_vieras" />
 
             <Button
                 android:id="@+id/button2_vieras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginEnd="59dp"
                 android:text="@string/twopoint"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="278dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button1_vieras" />
 
             <Button
                 android:id="@+id/button3_vieras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginEnd="59dp"
                 android:text="@string/threepoint"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="326dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button2_vieras" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/vieras"
+        android:id="@+id/koti"
         android:layout_width="205dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -125,7 +138,7 @@
             android:layout_height="733dp">
 
             <TextView
-                android:id="@+id/virheet_title_vieras"
+                android:id="@+id/virheet_title_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
@@ -139,7 +152,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/virheet_vieras"
+                android:id="@+id/virheet_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="23dp"
@@ -151,11 +164,11 @@
                 android:text="0"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/virheet_title_vieras"
+                app:layout_constraintStart_toEndOf="@+id/virheet_title_koti"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/pisteet_title_vieras"
+                android:id="@+id/pisteet_title_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="42dp"
@@ -165,10 +178,10 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/virheet_title_vieras" />
+                app:layout_constraintTop_toBottomOf="@+id/virheet_title_koti" />
 
             <TextView
-                android:id="@+id/pisteet_vieras"
+                android:id="@+id/pisteet_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="86dp"
@@ -182,39 +195,52 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pisteet_title_vieras" />
+                app:layout_constraintTop_toBottomOf="@+id/pisteet_title_koti" />
 
             <Button
-                android:id="@+id/button_virhe_vieras"
+                android:id="@+id/button_virhe_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginEnd="60dp"
                 android:text="@string/virhebutton"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="374dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3_koti" />
 
             <Button
-                android:id="@+id/button1_vieras"
+                android:id="@+id/button1_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="60dp"
                 android:text="@string/onepoint"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="230dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pisteet_koti" />
 
             <Button
-                android:id="@+id/button2_vieras"
+                android:id="@+id/button2_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginEnd="60dp"
                 android:text="@string/twopoint"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="278dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button1_koti" />
 
             <Button
-                android:id="@+id/button3_vieras"
+                android:id="@+id/button3_koti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginEnd="60dp"
                 android:text="@string/threepoint"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="326dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button2_koti" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
