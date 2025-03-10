@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         refresh()
-    }
+
     fun refresh() {
         if (gameInstance != null) {
             gameInstance?.let {
