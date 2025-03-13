@@ -29,18 +29,9 @@
        android:text="Lisää kuluja"
    />
 
-    <TextView
-        android:id="@+id/title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_margin="50dp"
-        android:text="Valitse toiminto"
-        />
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/title1"
         app:layout_constraintRight_toRightOf="parent"
@@ -52,11 +43,10 @@
         android:id="@+id/recap_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title2"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_margin="50dp"
         android:text="Yhteenveto"
-        android:onClick="recapClick"
         />
 
 

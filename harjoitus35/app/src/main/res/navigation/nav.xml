@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.harjoitus_3_5.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_start_to_kilometrikorvaus"
+            app:destination="@id/kilometrikorvausFragment"
+            />
+        <action
+            android:id="@+id/action_start_to_paivaraha"
+            app:destination="@+id/paivarahaFragment"
+            />
+        <action
+            android:id="@+id/action_start_to_yhteenveto"
+            app:destination="@+id/yhteenvetoFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/kilometrikorvausFragment"
+        android:name="com.example.harjoitus_3_5.KilometrikorvausFragment"
+        android:label="fragment_kilometrikorvaus"
+        tools:layout="@layout/fragment_kilometrikorvaus" >
+
+        <action
+            android:id="@+id/action_kilometrikorvaus_to_start"
+            app:destination="@id/startFragment"
+            />
+</fragment>
+    <fragment
+        android:id="@+id/paivarahaFragment"
+        android:name="com.example.harjoitus_3_5.PaivarahaFragment"
+        android:label="fragment_paivaraha"
+        tools:layout="@layout/fragment_paivaraha" >
+
+        <action
+            android:id="@+id/action_paivaraha_to_start"
+            app:destination="@id/startFragment"
+            />
+</fragment>
+    <fragment
+        android:id="@+id/yhteenvetoFragment"
+        android:name="com.example.harjoitus_3_5.YhteenvetoFragment"
+        android:label="fragment_yhteenveto"
+        tools:layout="@layout/fragment_yhteenveto" >
+
+        <action
+            android:id="@+id/action_yhteenveto_to_start"
+            app:destination="@id/startFragment"
+            />
+</fragment>
+</navigation>
