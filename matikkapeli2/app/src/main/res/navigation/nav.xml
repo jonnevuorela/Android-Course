@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainmenuFragment">
+
+    <fragment
+        android:id="@+id/mainmenuFragment"
+        android:name="com.example.matikkapeli2.MainmenuFragment"
+        android:label="Matikkapeli 2"
+        tools:layout="@layout/fragment_mainmenu" >
+        <action
+            android:id="@+id/action_mainmenu_to_pelimuoto"
+            app:destination="@+id/pelimuotoFragment"
+            />
+        <action
+            android:id="@+id/action_mainmenu_to_saannot"
+            app:destination="@+id/saannotFragment"
+            />
+        <action
+            android:id="@+id/action_mainmenu_to_about"
+            app:destination="@+id/aboutFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.matikkapeli2.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" >
+
+        <action
+            android:id="@+id/action_about_to_mainmenu"
+            app:destination="@+id/mainmenuFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/saannotFragment"
+        android:name="com.example.matikkapeli2.SaannotFragment"
+        android:label="Säännöt"
+        tools:layout="@layout/fragment_saannot" >
+
+        <action
+            android:id="@+id/action_saannot_to_mainmenu"
+            app:destination="@+id/mainmenuFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/pelimuotoFragment"
+        android:name="com.example.matikkapeli2.PelimuotoFragment"
+        android:label="Pelimuoto"
+        tools:layout="@layout/fragment_pelimuoto" >
+
+        <action
+            android:id="@+id/action_pelimuoto_to_mainmenu"
+            app:destination="@+id/mainmenuFragment"
+            />
+
+        <action
+            android:id="@+id/action_pelimuoto_to_peli"
+            app:destination="@+id/peliFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/recapFragment"
+        android:name="com.example.matikkapeli2.RecapFragment"
+        android:label="Tulos"
+        tools:layout="@layout/fragment_recap" >
+
+        <action
+            android:id="@+id/action_recap_to_mainmenu"
+            app:destination="@+id/mainmenuFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/peliFragment"
+        android:name="com.example.matikkapeli2.PeliFragment"
+        android:label=""
+        tools:layout="@layout/fragment_peli" >
+        <action
+            android:id="@+id/action_peli_to_recap"
+            app:destination="@+id/recapFragment"
+            />
+    </fragment>
+</navigation>
