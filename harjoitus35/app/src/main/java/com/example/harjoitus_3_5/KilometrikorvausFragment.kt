@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +21,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class KilometrikorvausFragment : Fragment() {
+    private val matkaViewModel: MatkaViewModel by activityViewModels()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -29,14 +35,27 @@ class KilometrikorvausFragment : Fragment() {
         }
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kilometrikorvaus, container, false)
+        val view = inflater.inflate(R.layout.fragment_kilometrikorvaus, container, false)
+        val saveButton: Button = view.findViewById(R.id.save_kilometrikorvaus_btn)
+        val km: EditText = view.findViewById(R.id.input3)
+
+        saveButton.setOnClickListener {
+            val kmValue = km.text.toString().toIntOrNull() ?: 0
+            val total = kmValue * 0.50
+            matkaViewModel.addKilometrikorvaus(total.toInt())
+            returnClick(it)
+        }
+        return view
     }
 
+    fun returnClick(view: View){
+        findNavController().navigate(R.id.action_kilometrikorvaus_to_start)
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

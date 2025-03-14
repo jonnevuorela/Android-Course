@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +21,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class PaivarahaFragment : Fragment() {
+    private val matkaViewModel: MatkaViewModel by activityViewModels()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,8 +39,22 @@ class PaivarahaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_paivaraha, container, false)
+        val view = inflater.inflate(R.layout.fragment_paivaraha, container, false)
+        val saveButton: Button = view.findViewById(R.id.save_paivaraha_btn)
+        val multiplier: EditText = view.findViewById(R.id.input2)
+        val amount: EditText = view.findViewById(R.id.input)
+        saveButton.setOnClickListener {
+            val multiplierValue = multiplier.text.toString().toIntOrNull() ?: 1
+            val amountValue = amount.text.toString().toIntOrNull() ?: 0
+            val total = multiplierValue * amountValue
+            matkaViewModel.addPaivaraha(total)
+            returnClick(it)
+        }
+        return view
+    }
+
+    fun returnClick(view: View){
+        findNavController().navigate(R.id.action_paivaraha_to_start)
     }
 
     companion object {

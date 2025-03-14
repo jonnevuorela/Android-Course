@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,6 +22,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class YhteenvetoFragment : Fragment() {
+    private val matkaViewModel: MatkaViewModel by activityViewModels()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -37,13 +42,26 @@ class YhteenvetoFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_yhteenveto, container, false)
         val returnButton: Button = view.findViewById(R.id.return_btn)
+        val totalKilometrikorvaus: TextView = view.findViewById(R.id.total_kilometrikorvaus)
+        val totalPaivaraha: TextView = view.findViewById(R.id.total_päiväraha)
+        val totalMatkakulu: TextView = view.findViewById(R.id.total_matkakulu)
+
         returnButton.setOnClickListener {
             returnClick(it)
         }
+
+        matkaViewModel.matka.let { matka ->
+            totalKilometrikorvaus.text = matka.totalKilometrikorvaus.toString()
+            totalPaivaraha.text = matka.totalPaivaraha.toString()
+            val totalSum = matka.totalKilometrikorvaus + matka.totalPaivaraha
+            totalMatkakulu.text = totalSum.toString()
+        }
+
         return view
     }
 
     fun returnClick(view: View){
+        matkaViewModel.clearMatka()
         findNavController().navigate(R.id.action_yhteenveto_to_start)
     }
 
