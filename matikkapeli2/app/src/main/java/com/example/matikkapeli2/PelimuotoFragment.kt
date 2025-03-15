@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +20,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class PelimuotoFragment : Fragment() {
+    private val gameViewModel: GameViewModel by activityViewModels()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,8 +38,30 @@ class PelimuotoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pelimuoto, container, false)
+        val view = inflater.inflate(R.layout.fragment_pelimuoto, container, false)
+
+        val minusButton = view.findViewById<Button>(R.id.minus_btn)
+        val plusButton = view.findViewById<Button>(R.id.plus_btn)
+        minusButton.setOnClickListener {
+            minusClick(it)
+        }
+
+        plusButton.setOnClickListener {
+            plusClick(it)
+        }
+        return view
+    }
+
+    fun minusClick(view: View) {
+        gameViewModel.resetGameData()
+        gameViewModel.game = gameViewModel.createNewGame(operator = Operator.MINUS)
+        findNavController().navigate(R.id.action_pelimuoto_to_peli)
+    }
+
+    fun plusClick(view: View) {
+        gameViewModel.resetGameData()
+        gameViewModel.game = gameViewModel.createNewGame(operator = Operator.PLUS)
+        findNavController().navigate(R.id.action_pelimuoto_to_peli)
     }
 
     companion object {

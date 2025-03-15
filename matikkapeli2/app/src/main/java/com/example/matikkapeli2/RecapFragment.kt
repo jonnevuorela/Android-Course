@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,7 +21,10 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class RecapFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+    private val gameViewModel: GameViewModel by activityViewModels()
+    private lateinit var pisteet: TextView
+    private lateinit var aika: TextView
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -33,11 +40,25 @@ class RecapFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recap, container, false)
+        val view = inflater.inflate(R.layout.fragment_recap, container, false)
+
+        pisteet = view.findViewById(R.id.pisteet)
+        aika = view.findViewById(R.id.aika)
+
+        pisteet.text = gameViewModel.game.score.toString()
+        aika.text = gameViewModel.game.time.toString()
+
+        val resetButton = view.findViewById<Button>(R.id.reset_btn)
+        resetButton.setOnClickListener {
+            resetClick(it)
+        }
+
+        return view
     }
 
-    companion object {
+    fun resetClick(view: View){
+        findNavController().navigate(R.id.action_recap_to_mainmenu)
+    }    companion object {
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
